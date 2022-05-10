@@ -3,7 +3,7 @@ import express from "express"
 import "express-async-errors"
 import "dotenv/config"
 import cors from "cors"
-import morgan from "morgan"
+// import morgan from "morgan"
 
 //Security imports
 import helmet from "helmet"
@@ -22,9 +22,9 @@ import connectDB from "./db/connect.js"
 const app = express()
 
 //Middleware
-if(process.env.NODE_ENV !== "production"){
-    app.use(morgan("dev"))
-}
+// if(process.env.NODE_ENV !== "production"){
+//     app.use(morgan("dev"))
+// }
 app.use(express.json())
 app.use(cors({
     credentials:true,
